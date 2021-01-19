@@ -48,7 +48,4 @@
         TextBox2.Text = DateString
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Process.Start("SHitShell\pm.exe")
-    End Sub
 End Class
