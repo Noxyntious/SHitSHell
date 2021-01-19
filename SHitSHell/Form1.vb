@@ -7,8 +7,8 @@
         Me.FormBorderStyle = FormBorderStyle.None
         Me.WindowState = FormWindowState.Maximized
     End Sub
-
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        On Error GoTo errorHandler
         If ComboBox1.Text = "Explorer" Then
             Process.Start("explorer.exe")
             ComboBox1.Text = ""
@@ -28,7 +28,10 @@
             Process.Start("ms-settings:")
             ComboBox1.Text = ""
         End If
-
+        Exit Sub
+errorHandler:
+        MsgBox("you arent even running windows 10 what are you doing")
+        Resume Next
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
