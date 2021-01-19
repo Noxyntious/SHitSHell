@@ -35,7 +35,7 @@ Partial Class Form1
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Explorer", "Command Prompt", "Notepad", "Internet"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Explorer", "Command Prompt", "Notepad", "Internet", "Control Panel", "Settings (Windows 10)"})
         Me.ComboBox1.Location = New System.Drawing.Point(12, 12)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)

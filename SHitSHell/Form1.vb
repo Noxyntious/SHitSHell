@@ -21,6 +21,12 @@
         ElseIf ComboBox1.Text = "Internet" Then
             Process.Start("http://google.com")
             ComboBox1.Text = ""
+        ElseIf ComboBox1.Text = "Control Panel" Then
+            Process.Start("control.exe")
+            ComboBox1.Text = ""
+        ElseIf ComboBox1.Text = "Settings (Windows 10)" Then
+            Process.Start("ms-settings:")
+            ComboBox1.Text = ""
         End If
 
     End Sub
@@ -40,5 +46,9 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         TextBox1.Text = TimeString
         TextBox2.Text = DateString
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        Process.Start("SHitShell\pm.exe")
     End Sub
 End Class
