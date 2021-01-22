@@ -1,12 +1,28 @@
 ﻿Public Class Form1
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' thanks, shady ass website!! :)
+
+        Dim working_area As Rectangle =
+    SystemInformation.WorkingArea
+        Dim x As Integer =
+            working_area.Left +
+            working_area.Width -
+            Me.Width
+        Dim y As Integer =
+            working_area.Top +
+            working_area.Height -
+        Me.Height
+        Me.Location = New Point(x, y + 39)
         ' prepare for maximum jank
         Timer1.Enabled = True
         TextBox1.Text = Format(Now, "hh:mm:ss")
         TextBox2.Text = Format(Now, "dd-mm-yyyy")
         Me.FormBorderStyle = FormBorderStyle.None
-        Me.WindowState = FormWindowState.Maximized
+        Me.TopMost = True
+
     End Sub
+
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         On Error GoTo errorHandler ' yanderedev
         If ComboBox1.Text = "Explorer" Then
@@ -51,4 +67,7 @@ errorHandler:
         TextBox2.Text = DateString
     End Sub 'i think this is like the only not jank piece of code
 
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
 End Class

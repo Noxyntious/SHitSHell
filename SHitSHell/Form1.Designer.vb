@@ -36,7 +36,7 @@ Partial Class Form1
         Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Explorer", "Command Prompt", "Notepad", "Internet", "Control Panel", "Settings (Windows 10)"})
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 12)
+        Me.ComboBox1.Location = New System.Drawing.Point(12, 5)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.Button1.Location = New System.Drawing.Point(13, 92)
+        Me.Button1.Location = New System.Drawing.Point(139, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 21)
         Me.Button1.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(13, 119)
+        Me.Button2.Location = New System.Drawing.Point(265, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 21)
         Me.Button2.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class Form1
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(13, 40)
+        Me.TextBox1.Location = New System.Drawing.Point(391, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(120, 20)
         Me.TextBox1.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class Form1
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(13, 66)
+        Me.TextBox2.Location = New System.Drawing.Point(517, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(120, 20)
         Me.TextBox2.TabIndex = 4
@@ -88,7 +88,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 646)
+        Me.ClientSize = New System.Drawing.Size(644, 30)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button2)
@@ -97,7 +97,7 @@ Partial Class Form1
         Me.Cursor = System.Windows.Forms.Cursors.Cross
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "SHitSHell"
         Me.ResumeLayout(False)
         Me.PerformLayout()
