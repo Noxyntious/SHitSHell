@@ -43,7 +43,7 @@ Partial Class SHitSHell
         '
         'Button1
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button1.Location = New System.Drawing.Point(139, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 21)
@@ -94,7 +94,7 @@ Partial Class SHitSHell
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SHitSHell"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual

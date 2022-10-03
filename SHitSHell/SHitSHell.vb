@@ -1,5 +1,4 @@
 ﻿Imports IWshRuntimeLibrary
-Imports Shell32
 
 Public Class SHitSHell
 
