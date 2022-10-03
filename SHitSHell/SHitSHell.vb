@@ -26,7 +26,9 @@ Public Class SHitSHell
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        On Error GoTo errorHandler ' yanderedev
+
+        'Checks the combobox for a string, then runs a process based on the selected string. TIP: For things like this, it's best to use buttons with pretty icons.
+
         If ComboBox1.Text = "Explorer" Then
             Process.Start("explorer.exe")
             ComboBox1.Text = ""
@@ -43,13 +45,16 @@ Public Class SHitSHell
             Process.Start("control.exe")
             ComboBox1.Text = ""
         ElseIf ComboBox1.Text = "Settings (Windows 10)" Then
-            Process.Start("ms-settings:")
-            ComboBox1.Text = ""
+
+            Try
+                Process.Start("ms-settings:")
+                ComboBox1.Text = ""
+            Catch
+                MsgBox("This feature only works on Windows 8 or later.", MsgBoxStyle.Critical, "Exception")
+            End Try
+
         End If
         Exit Sub
-errorHandler:
-        MsgBox("you arent even running windows 10 what are you doing")
-        Resume Next
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
