@@ -1,7 +1,7 @@
 ﻿Imports IWshRuntimeLibrary
 Imports Shell32
 
-Public Class Form1
+Public Class SHitSHell
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' thanks, shady ass website!! :)
