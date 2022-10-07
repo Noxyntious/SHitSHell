@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class SHitSHell
     Inherits System.Windows.Forms.Form
 
     'Formulář přepisuje metodu Dispose, aby vyčistil seznam součástí.
@@ -43,12 +43,12 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
         Me.Button1.Location = New System.Drawing.Point(139, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 21)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "close this trash"
+        Me.Button1.Text = "Exit"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -57,7 +57,7 @@ Partial Class Form1
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 21)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "launch at startup"
+        Me.Button2.Text = "Launch at Startup"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox1
@@ -83,7 +83,7 @@ Partial Class Form1
         'Timer1
         '
         '
-        'Form1
+        'SHitSHell
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -94,9 +94,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
+        Me.Name = "SHitSHell"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "SHitSHell"
         Me.ResumeLayout(False)

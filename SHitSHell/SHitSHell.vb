@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports IWshRuntimeLibrary
+
+Public Class SHitSHell
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' thanks, shady ass website!! :)
@@ -24,7 +26,9 @@
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        On Error GoTo errorHandler ' yanderedev
+
+        'Checks the combobox for a string, then runs a process based on the selected string. TIP: For things like this, it's best to use buttons with pretty icons.
+
         If ComboBox1.Text = "Explorer" Then
             Process.Start("explorer.exe")
             ComboBox1.Text = ""
@@ -41,13 +45,16 @@
             Process.Start("control.exe")
             ComboBox1.Text = ""
         ElseIf ComboBox1.Text = "Settings (Windows 10)" Then
-            Process.Start("ms-settings:")
-            ComboBox1.Text = ""
+
+            Try
+                Process.Start("ms-settings:")
+                ComboBox1.Text = ""
+            Catch
+                MsgBox("This feature only works on Windows 8 or later.", MsgBoxStyle.Critical, "Exception")
+            End Try
+
         End If
         Exit Sub
-errorHandler:
-        MsgBox("you arent even running windows 10 what are you doing")
-        Resume Next
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -55,19 +62,21 @@ errorHandler:
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        MsgBox("way too lazy to code this in so just copy this exe file to %userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup")
-    End Sub 'coming in 2.0 i swear
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        'Adds the application to the Startup folder.
 
+        Dim WshShell As WshShell = New WshShell()
+        Dim ShortcutPath As String = Environment.GetFolderPath(Environment.SpecialFolder.Startup)
+        Dim Shortcut As IWshShortcut = CType(WshShell.CreateShortcut(System.IO.Path.Combine(ShortcutPath, Application.ProductName) & ".lnk"), IWshShortcut)
+        Shortcut.TargetPath = Application.ExecutablePath
+        Shortcut.WorkingDirectory = Application.StartupPath
+        Shortcut.Description = "SHitSHell"
+        Shortcut.Save()
+        MsgBox("SHitSHell has been added to the Startup folder.", MsgBoxStyle.Information, "Information")
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         TextBox1.Text = TimeString
         TextBox2.Text = DateString
     End Sub 'i think this is like the only not jank piece of code
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
 End Class
