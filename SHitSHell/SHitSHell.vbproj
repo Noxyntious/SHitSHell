@@ -88,6 +88,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SHitDock.Designer.vb">
+      <DependentUpon>SHitDock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SHitDock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SHitLauncher.Designer.vb">
+      <DependentUpon>SHitLauncher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SHitLauncher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SHitSHell.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,8 +122,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ShutdownPrompt.Designer.vb">
+      <DependentUpon>ShutdownPrompt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShutdownPrompt.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SHitDock.resx">
+      <DependentUpon>SHitDock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SHitLauncher.resx">
+      <DependentUpon>SHitLauncher.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SHitSHell.resx">
       <DependentUpon>SHitSHell.vb</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +144,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShutdownPrompt.resx">
+      <DependentUpon>ShutdownPrompt.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
