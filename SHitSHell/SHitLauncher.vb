@@ -13,6 +13,7 @@ SystemInformation.WorkingArea
         Me.Height
         Me.Location = New Point(0, 0)
         Me.TopMost = True
+        Me.Height = 22
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged

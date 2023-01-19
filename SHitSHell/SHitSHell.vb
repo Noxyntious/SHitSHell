@@ -23,7 +23,7 @@ Public Class SHitSHell
         TextBox2.Text = Format(Now, "dd-mm-yyyy")
         Me.FormBorderStyle = FormBorderStyle.None
         Me.TopMost = True
-
+        Me.Height = 22
     End Sub
 
     'Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged

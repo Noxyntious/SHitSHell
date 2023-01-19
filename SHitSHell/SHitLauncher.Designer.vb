@@ -31,7 +31,7 @@ Partial Class SHitLauncher
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Add to Startup", "Credits", "Exit"})
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 9)
+        Me.ComboBox1.Location = New System.Drawing.Point(12, 0)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class SHitLauncher
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(274, 39)
+        Me.ClientSize = New System.Drawing.Size(274, 22)
         Me.Controls.Add(Me.ComboBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SHitLauncher"

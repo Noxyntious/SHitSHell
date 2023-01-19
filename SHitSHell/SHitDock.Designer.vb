@@ -22,80 +22,95 @@ Partial Class SHitDock
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'PictureBox5
         '
-        Me.Button1.Location = New System.Drawing.Point(82, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(64, 60)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Settings"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PictureBox5.BackgroundImage = Global.SHitSHell.My.Resources.Resources.shutdown
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox5.Location = New System.Drawing.Point(752, 8)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(36, 36)
+        Me.PictureBox5.TabIndex = 5
+        Me.PictureBox5.TabStop = False
         '
-        'Button2
+        'PictureBox4
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(64, 60)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Explorer"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.PictureBox4.BackgroundImage = Global.SHitSHell.My.Resources.Resources.terminal
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(134, 12)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(36, 28)
+        Me.PictureBox4.TabIndex = 4
+        Me.PictureBox4.TabStop = False
         '
-        'Button3
+        'PictureBox3
         '
-        Me.Button3.Location = New System.Drawing.Point(152, 12)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(64, 60)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Internet"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.PictureBox3.BackgroundImage = Global.SHitSHell.My.Resources.Resources.internet
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(92, 8)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(36, 36)
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
         '
-        'Button4
+        'PictureBox2
         '
-        Me.Button4.Location = New System.Drawing.Point(222, 12)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(64, 60)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Command Prompt"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.PictureBox2.BackgroundImage = Global.SHitSHell.My.Resources.Resources.settings
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(50, 8)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(36, 36)
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
         '
-        'Button5
+        'PictureBox1
         '
-        Me.Button5.Location = New System.Drawing.Point(724, 12)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(64, 60)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Shutdown"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.PictureBox1.BackgroundImage = Global.SHitSHell.My.Resources.Resources.explorer
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(36, 36)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'SHitDock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 84)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(800, 50)
+        Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SHitDock"
         Me.Text = " SHitDock"
         Me.TopMost = True
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox5 As PictureBox
 End Class
