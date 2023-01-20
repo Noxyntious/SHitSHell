@@ -3,17 +3,14 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If ComboBox1.Text = "Shut down" Then
-            Process.Start("shutdown /s /t 00")
+            Process.Start("shutdown", "/s /t 00")
         ElseIf ComboBox1.Text = "Restart" Then
-            Process.Start("shutdown /r /t 00")
+            Process.Start("shutdown", "/s /t 00")
         ElseIf ComboBox1.Text = "Close SHitSHell" Then
-            SHitSHell.Close()
+            ShareefDontLikeIt.SHitClose()
         End If
     End Sub
 
@@ -25,5 +22,9 @@
         ElseIf ComboBox1.Text = "Close SHitSHell" Then
             Label2.Text = "Closes SHitSHell and returns the default desktop."
         End If
+    End Sub
+
+    Private Sub ShutdownPrompt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

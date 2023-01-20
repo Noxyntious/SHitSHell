@@ -1,8 +1,82 @@
 ﻿Imports IWshRuntimeLibrary
+Imports System.Runtime.InteropServices
+Imports System.Configuration
+Module ShareefDontLikeIt
+    <DllImport("user32.dll", SetLastError:=True, CharSet:=CharSet.Auto)>
+    Private Function FindWindow(ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
+    End Function
+
+    <DllImport("user32.dll", SetLastError:=True)>
+    Private Function SetWindowPos(ByVal hWnd As IntPtr, ByVal hWndInsertAfter As IntPtr, ByVal X As Integer, ByVal Y As Integer, ByVal cx As Integer, ByVal cy As Integer, ByVal uFlags As SetWindowPosFlags) As Boolean
+    End Function
+
+    <Flags>
+    Private Enum SetWindowPosFlags As UInteger
+        SynchronousWindowPosition = &H4000
+        DeferErase = &H2000
+        DrawFrame = &H20
+        FrameChanged = &H20
+        HideWindow = &H80
+        DoNotActivate = &H10
+        DoNotCopyBits = &H100
+        IgnoreMove = &H2
+        DoNotChangeOwnerZOrder = &H200
+        DoNotRedraw = &H8
+        DoNotReposition = &H200
+        DoNotSendChangingEvent = &H400
+        IgnoreResize = &H1
+        IgnoreZOrder = &H4
+        ShowWindow = &H40
+    End Enum
+
+    Sub HideTheTaskbar()
+        Dim window As IntPtr = FindWindow("Shell_traywnd", "")
+        SetWindowPos(window, IntPtr.Zero, 0, 0, 0, 0, SetWindowPosFlags.HideWindow)
+    End Sub
+    Sub SHitClose()
+        For Each prog As Process In Process.GetProcesses
+            If prog.ProcessName = "explorer" Then
+                prog.Kill()
+            End If
+        Next
+        SHitSHell.Close()
+    End Sub
+    Sub SetLight()
+        SHitSHell.TextBox1.ForeColor = Color.Black
+        SHitSHell.TextBox2.ForeColor = Color.Black
+        SHitSHell.TextBox1.BackColor = Color.WhiteSmoke
+        SHitSHell.TextBox2.BackColor = Color.WhiteSmoke
+        SHitSHell.BackColor = Color.WhiteSmoke
+        SHitLauncher.BackColor = Color.WhiteSmoke
+        SHitDock.BackColor = Color.WhiteSmoke
+    End Sub
+    Sub SetDark()
+        SHitSHell.TextBox1.ForeColor = Color.White
+        SHitSHell.TextBox2.ForeColor = Color.White
+        SHitSHell.TextBox1.BackColor = Color.FromArgb(64, 64, 64)
+        SHitSHell.TextBox2.BackColor = Color.FromArgb(64, 64, 64)
+        SHitSHell.BackColor = Color.FromArgb(64, 64, 64)
+        SHitLauncher.BackColor = Color.FromArgb(64, 64, 64)
+        SHitDock.BackColor = Color.FromArgb(64, 64, 64)
+    End Sub
+End Module
 
 Public Class SHitSHell
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'My.Computer.Registry.CurrentUser.CreateSubKey("SHitSHell")
+        'Dim RegKeyAppearance = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\SHitSHell", "Appearance", Nothing)
+        'If RegKeyAppearance Is "light" Then
+        '    MsgBox("Detected Light mode in registry.")
+        '    ShareefDontLikeIt.SetLight()
+        'ElseIf RegKeyAppearance Is "dark" Then
+        '    MsgBox("Detected Dark mode in registry.")
+        '    ShareefDontLikeIt.SetDark()
+        'Else
+        '    MsgBox("Registry value does not exist. Creating now.")
+        '    My.Computer.Registry.SetValue("HKEY_CURRENT_USER\SHitSHell", "Appearance", "dark")
+        'End If
+        'MsgBox("Style value is " & RegKeyAppearance)
+        ShareefDontLikeIt.HideTheTaskbar()
         SHitDock.Show()
         SHitLauncher.Show()
         ' thanks, shady ass website!! :)

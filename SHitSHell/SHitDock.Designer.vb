@@ -97,6 +97,7 @@ Partial Class SHitDock
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SHitDock"
+        Me.ShowInTaskbar = False
         Me.Text = " SHitDock"
         Me.TopMost = True
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()

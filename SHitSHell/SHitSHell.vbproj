@@ -88,6 +88,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbgMenu.Designer.vb">
+      <DependentUpon>DbgMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DbgMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SHitDock.Designer.vb">
       <DependentUpon>SHitDock.vb</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DbgMenu.resx">
+      <DependentUpon>DbgMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SHitDock.resx">
       <DependentUpon>SHitDock.vb</DependentUpon>
     </EmbeddedResource>

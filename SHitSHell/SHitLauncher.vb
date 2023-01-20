@@ -20,7 +20,7 @@ SystemInformation.WorkingArea
         'Checks the combobox for a string, then runs a process based on the selected string. TIP: For things like this, it's best to use buttons with pretty icons.
 
         If ComboBox1.Text = "Exit" Then
-            SHitSHell.Close()
+            ShareefDontLikeIt.SHitClose()
             ComboBox1.Text = ""
         ElseIf ComboBox1.Text = "Add to Startup" Then
             Dim WshShell As WshShell = New WshShell()
@@ -37,5 +37,9 @@ SystemInformation.WorkingArea
             ComboBox1.Text = ""
         End If
         Exit Sub
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DbgMenu.Show()
     End Sub
 End Class
