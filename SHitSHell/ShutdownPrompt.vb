@@ -1,10 +1,6 @@
 ﻿Public Class ShutdownPrompt
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
-    End Sub
-
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles OKButton.Click
         If ComboBox1.Text = "Shut down" Then
             Process.Start("shutdown", "/s /t 00")
         ElseIf ComboBox1.Text = "Restart" Then
@@ -25,6 +21,6 @@
     End Sub
 
     Private Sub ShutdownPrompt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ComboBox1.SelectedIndex = 0
     End Sub
 End Class

@@ -45,10 +45,11 @@ SystemInformation.WorkingArea
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        'Tries to launch modern settings. If the user is running Windows 7, then it will and launch Control Panel instead.
         Try
             Process.Start("ms-settings:")
         Catch
-            MsgBox("This feature only works on Windows 8 or later.", MsgBoxStyle.Critical, "Exception")
+            Process.Start("control")
         End Try
     End Sub
 
@@ -57,7 +58,7 @@ SystemInformation.WorkingArea
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-        ShutdownPrompt.Show()
+        ShutdownPrompt.ShowDialog()
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
