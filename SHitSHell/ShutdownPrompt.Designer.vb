@@ -23,8 +23,8 @@ Partial Class ShutdownPrompt
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShutdownPrompt))
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.CancelButton = New System.Windows.Forms.Button()
+        Me.OKButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,23 +32,26 @@ Partial Class ShutdownPrompt
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
-        'Button1
+        'CancelButton
         '
-        Me.Button1.Location = New System.Drawing.Point(407, 150)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Cancel"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CancelButton.Location = New System.Drawing.Point(407, 150)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelButton.TabIndex = 0
+        Me.CancelButton.Text = "Cancel"
+        Me.CancelButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'OKButton
         '
-        Me.Button2.Location = New System.Drawing.Point(326, 150)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "OK"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.OKButton.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.OKButton.Location = New System.Drawing.Point(326, 150)
+        Me.OKButton.Name = "OKButton"
+        Me.OKButton.Size = New System.Drawing.Size(75, 23)
+        Me.OKButton.TabIndex = 1
+        Me.OKButton.Text = "OK"
+        Me.OKButton.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -61,13 +64,13 @@ Partial Class ShutdownPrompt
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Shut down", "Restart", "Close SHitSHell"})
         Me.ComboBox1.Location = New System.Drawing.Point(72, 123)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(398, 21)
         Me.ComboBox1.TabIndex = 4
-        Me.ComboBox1.Text = "Shut down"
         '
         'Label2
         '
@@ -98,6 +101,7 @@ Partial Class ShutdownPrompt
         '
         'ShutdownPrompt
         '
+        Me.AcceptButton = Me.OKButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(494, 183)
@@ -106,8 +110,8 @@ Partial Class ShutdownPrompt
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.OKButton)
+        Me.Controls.Add(Me.CancelButton)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -120,8 +124,8 @@ Partial Class ShutdownPrompt
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents CancelButton As Button
+    Friend WithEvents OKButton As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ComboBox1 As ComboBox
