@@ -30,15 +30,14 @@ Module ShareefDontLikeIt
     End Enum
 
     Sub HideTheTaskbar()
+        'Hide taskbar on ShitShell startup.
         Dim window As IntPtr = FindWindow("Shell_traywnd", "")
         SetWindowPos(window, IntPtr.Zero, 0, 0, 0, 0, SetWindowPosFlags.HideWindow)
     End Sub
     Sub SHitClose()
-        For Each prog As Process In Process.GetProcesses
-            If prog.ProcessName = "explorer" Then
-                prog.Kill()
-            End If
-        Next
+        'Show the taskbar when Shitshell is closed.
+        Dim window As IntPtr = FindWindow("Shell_traywnd", "")
+        SetWindowPos(window, IntPtr.Zero, 0, 0, 0, 0, SetWindowPosFlags.ShowWindow)
         SHitSHell.Close()
     End Sub
     Sub SetLight()
