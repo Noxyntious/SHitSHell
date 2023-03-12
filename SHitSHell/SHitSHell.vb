@@ -63,6 +63,14 @@ End Module
 
 Public Class SHitSHell
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Load settings.
+        If My.Settings.Appearance = 0 Then
+            ShareefDontLikeIt.SetDark()
+        Else
+            ShareefDontLikeIt.SetLight()
+        End If
+
         ShareefDontLikeIt.HideTheTaskbar()
         SHitDock.Show()
         SHitLauncher.Show()
