@@ -40,11 +40,12 @@ SystemInformation.WorkingArea
         Return path
     End Function
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles ExplorerIcon.Click
+        'Starts new instance of Windows Explorer.
         Process.Start("explorer.exe")
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles SettingsIcon.Click
         'Tries to launch modern settings. If the user is running Windows 7, then it will and launch Control Panel instead.
         Try
             Process.Start("ms-settings:")
@@ -53,15 +54,30 @@ SystemInformation.WorkingArea
         End Try
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Process.Start("https://google.com")
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles InternetIcon.Click
+        'Attempts to load Firefox, if you don't have Firefox, it will attempt to launch Chrome, if you don't have Chrome, it will attempt to launch Edge, if you don't have Edge it will attempt to launch Internet Explorer.
+        Try
+            Process.Start("Firefox.exe")
+        Catch
+            Try
+                Process.Start("Chrome.exe")
+            Catch
+                Try
+                    Process.Start("ms-edge")
+                Catch
+                    Process.Start("iexplore.exe")
+                End Try
+            End Try
+        End Try
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        'Shows the shutdown dialogue.
         ShutdownPrompt.ShowDialog()
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        'Starts Command Prompt.
         Process.Start("cmd.exe")
     End Sub
 End Class

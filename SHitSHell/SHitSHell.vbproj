@@ -224,5 +224,20 @@
   <ItemGroup>
     <None Include="Resources\shitshell.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_1023.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_27.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shell32_16744.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_165.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_101.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
