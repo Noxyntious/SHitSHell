@@ -48,6 +48,8 @@ Module ShareefDontLikeIt
         SHitSHell.BackColor = Color.WhiteSmoke
         SHitLauncher.BackColor = Color.WhiteSmoke
         SHitDock.BackColor = Color.WhiteSmoke
+        My.Settings.Appearance = 1
+        My.Settings.Save()
     End Sub
     Sub SetDark()
         SHitSHell.TextBox1.ForeColor = Color.White
@@ -57,6 +59,8 @@ Module ShareefDontLikeIt
         SHitSHell.BackColor = Color.FromArgb(64, 64, 64)
         SHitLauncher.BackColor = Color.FromArgb(64, 64, 64)
         SHitDock.BackColor = Color.FromArgb(64, 64, 64)
+        My.Settings.Appearance = 0
+        My.Settings.Save()
     End Sub
 End Module
 #End Region

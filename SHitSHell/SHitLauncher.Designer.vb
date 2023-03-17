@@ -31,7 +31,7 @@ Partial Class SHitLauncher
         Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Add to Startup", "Credits", "Exit"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Add to Startup", "Credits", "Settings", "Exit"})
         Me.ComboBox1.Location = New System.Drawing.Point(12, 0)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(103, 21)

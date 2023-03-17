@@ -39,7 +39,6 @@ Partial Class SHitDock
         'PictureBox5
         '
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Image = Global.SHitSHell.My.Resources.Resources.imageres_101
         Me.PictureBox5.Location = New System.Drawing.Point(756, 9)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(32, 32)
@@ -51,7 +50,6 @@ Partial Class SHitDock
         'PictureBox4
         '
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Image = Global.SHitSHell.My.Resources.Resources.imageres_165
         Me.PictureBox4.Location = New System.Drawing.Point(126, 9)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(32, 32)
@@ -63,7 +61,6 @@ Partial Class SHitDock
         'InternetIcon
         '
         Me.InternetIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.InternetIcon.Image = Global.SHitSHell.My.Resources.Resources.shell32_16744
         Me.InternetIcon.Location = New System.Drawing.Point(88, 9)
         Me.InternetIcon.Name = "InternetIcon"
         Me.InternetIcon.Size = New System.Drawing.Size(32, 32)
@@ -75,7 +72,6 @@ Partial Class SHitDock
         'SettingsIcon
         '
         Me.SettingsIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.SettingsIcon.Image = Global.SHitSHell.My.Resources.Resources.imageres_27
         Me.SettingsIcon.Location = New System.Drawing.Point(50, 9)
         Me.SettingsIcon.Name = "SettingsIcon"
         Me.SettingsIcon.Size = New System.Drawing.Size(32, 32)
@@ -87,7 +83,6 @@ Partial Class SHitDock
         'ExplorerIcon
         '
         Me.ExplorerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ExplorerIcon.Image = Global.SHitSHell.My.Resources.Resources.imageres_1023
         Me.ExplorerIcon.Location = New System.Drawing.Point(12, 9)
         Me.ExplorerIcon.Name = "ExplorerIcon"
         Me.ExplorerIcon.Size = New System.Drawing.Size(32, 32)

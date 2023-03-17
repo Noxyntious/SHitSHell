@@ -35,6 +35,8 @@ SystemInformation.WorkingArea
         ElseIf ComboBox1.Text = "Credits" Then
             MsgBox("Noxyntious - almost everything" + vbCrLf + "WindowsLogic - add to startup, other things", MsgBoxStyle.Information, "Credits")
             ComboBox1.Text = ""
+        ElseIf ComboBox1.Text = "Settings" Then
+            Settings.Show()
         End If
         Exit Sub
     End Sub
