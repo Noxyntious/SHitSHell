@@ -55,20 +55,8 @@ SystemInformation.WorkingArea
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles InternetIcon.Click
-        'Attempts to load Firefox, if you don't have Firefox, it will attempt to launch Chrome, if you don't have Chrome, it will attempt to launch Edge, if you don't have Edge it will attempt to launch Internet Explorer.
-        Try
-            Process.Start("Firefox.exe")
-        Catch
-            Try
-                Process.Start("Chrome.exe")
-            Catch
-                Try
-                    Process.Start("ms-edge")
-                Catch
-                    Process.Start("iexplore.exe")
-                End Try
-            End Try
-        End Try
+        'Launches the default browser.
+        Process.Start(getDefaultBrowser)
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click

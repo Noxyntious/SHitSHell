@@ -93,11 +93,11 @@ Partial Class ShutdownPrompt
         '
         'ShutdownIcon
         '
-        Me.ShutdownIcon.Image = Global.SHitSHell.My.Resources.Resources.imageres_101
-        Me.ShutdownIcon.Location = New System.Drawing.Point(31, 112)
+        Me.ShutdownIcon.BackgroundImage = Global.SHitSHell.My.Resources.Resources.pc
+        Me.ShutdownIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ShutdownIcon.Location = New System.Drawing.Point(23, 107)
         Me.ShutdownIcon.Name = "ShutdownIcon"
-        Me.ShutdownIcon.Size = New System.Drawing.Size(32, 32)
-        Me.ShutdownIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.ShutdownIcon.Size = New System.Drawing.Size(40, 37)
         Me.ShutdownIcon.TabIndex = 7
         Me.ShutdownIcon.TabStop = False
         '

@@ -95,16 +95,16 @@
     <Compile Include="DbgMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Settings.Designer.vb">
       <DependentUpon>Settings.vb</DependentUpon>
     </Compile>
     <Compile Include="Settings.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SHitDock.Designer.vb">
       <DependentUpon>SHitDock.vb</DependentUpon>
@@ -232,21 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shitshell.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageres_1023.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageres_27.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\shell32_16744.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageres_165.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageres_101.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

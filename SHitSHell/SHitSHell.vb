@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Microsoft.Win32
 
 #Region "Various Settings"
 Module ShareefDontLikeIt
@@ -9,7 +10,17 @@ Module ShareefDontLikeIt
     <DllImport("user32.dll", SetLastError:=True)>
     Private Function SetWindowPos(ByVal hWnd As IntPtr, ByVal hWndInsertAfter As IntPtr, ByVal X As Integer, ByVal Y As Integer, ByVal cx As Integer, ByVal cy As Integer, ByVal uFlags As SetWindowPosFlags) As Boolean
     End Function
-
+    <DllImport("shell32.dll", EntryPoint:="FindExecutableW")>
+    Public Function FindExecutableW(<InAttribute(), MarshalAs(UnmanagedType.LPTStr)> ByVal lpFile As String, <InAttribute(), MarshalAs(UnmanagedType.LPTStr)> ByVal lpDirectory As String, <MarshalAs(UnmanagedType.LPWStr)> ByVal lpResult As System.Text.StringBuilder) As IntPtr
+    End Function
+    Public Function getDefaultBrowser() As String
+        Dim tmpFile As String = IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "fake.html")
+        IO.File.WriteAllText(tmpFile, "")
+        Dim sb As New System.Text.StringBuilder(260)
+        FindExecutableW(tmpFile, Nothing, sb)
+        If IO.File.Exists(tmpFile) Then IO.File.Delete(tmpFile)
+        Return sb.ToString
+    End Function
     <Flags>
     Private Enum SetWindowPosFlags As UInteger
         SynchronousWindowPosition = &H4000

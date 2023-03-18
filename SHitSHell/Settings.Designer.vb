@@ -29,8 +29,10 @@ Partial Class Settings
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -96,13 +98,23 @@ Partial Class Settings
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Button2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(768, 406)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.Text = "Dbg"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(72, 54)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(111, 23)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Hmm. Debugging."
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Settings
         '
@@ -110,11 +122,16 @@ Partial Class Settings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.TabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Settings"
-        Me.Text = "Form1"
+        Me.Opacity = 0.95R
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Settings"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -126,4 +143,5 @@ Partial Class Settings
     Friend WithEvents Button1 As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Button2 As Button
 End Class

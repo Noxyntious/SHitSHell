@@ -38,6 +38,7 @@ Partial Class SHitDock
         '
         'PictureBox5
         '
+        Me.PictureBox5.BackgroundImage = Global.SHitSHell.My.Resources.Resources.shutdown
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox5.Location = New System.Drawing.Point(756, 9)
         Me.PictureBox5.Name = "PictureBox5"
@@ -49,7 +50,8 @@ Partial Class SHitDock
         '
         'PictureBox4
         '
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.BackgroundImage = Global.SHitSHell.My.Resources.Resources.terminal
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox4.Location = New System.Drawing.Point(126, 9)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(32, 32)
@@ -60,6 +62,7 @@ Partial Class SHitDock
         '
         'InternetIcon
         '
+        Me.InternetIcon.BackgroundImage = Global.SHitSHell.My.Resources.Resources.internet
         Me.InternetIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.InternetIcon.Location = New System.Drawing.Point(88, 9)
         Me.InternetIcon.Name = "InternetIcon"
@@ -71,6 +74,7 @@ Partial Class SHitDock
         '
         'SettingsIcon
         '
+        Me.SettingsIcon.BackgroundImage = Global.SHitSHell.My.Resources.Resources.settings
         Me.SettingsIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.SettingsIcon.Location = New System.Drawing.Point(50, 9)
         Me.SettingsIcon.Name = "SettingsIcon"
@@ -82,6 +86,7 @@ Partial Class SHitDock
         '
         'ExplorerIcon
         '
+        Me.ExplorerIcon.BackgroundImage = Global.SHitSHell.My.Resources.Resources.explorer
         Me.ExplorerIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ExplorerIcon.Location = New System.Drawing.Point(12, 9)
         Me.ExplorerIcon.Name = "ExplorerIcon"
